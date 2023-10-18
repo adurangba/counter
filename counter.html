@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <button class="down">Reduce</button>
+    <button class="up">Increase</button>
+
+    <script>
+        show = document.querySelector("p");
+        reduce = document.querySelector(".down");
+        increase = document.querySelector(".up");
+        num = 0;
+
+        increase.addEventListener("click",function(){
+            if (num >=10){
+                num = 10;
+             }else{
+                num += 1;
+            }
+            show.innerText = num;
+            console.log(num);
+        });
+        reduce.addEventListener("click",function(){
+            if (num <=0){
+                num = 0;
+            }else{
+                num -= 1;
+            }
+            show.innerText = num;
+            console.log(num);
+        });
+    </script>
+</body>
+</html>
